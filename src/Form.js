@@ -3,8 +3,7 @@ import React, {Component} from 'react';
 class Form extends Component {
         initialState = {
             task: '',
-            details: '',
-            date: ''
+            checked: false
         };
 
         state = this.initialState;
@@ -26,7 +25,7 @@ class Form extends Component {
     }
 
     render() {
-        const { task, details, date } = this.state;
+        const { task } = this.state;
 
         return (
             <form onSubmit={this.onFormSubmit}>
@@ -37,22 +36,8 @@ class Form extends Component {
                     id="task"
                     value={task}
                     onChange={this.handleChange} />
-                <label for="details">Details</label>
-                <input
-                    type="text"
-                    name="details"
-                    id="details"
-                    value={details}
-                    onChange={this.handleChange} />
-                <label for="date">Date</label>
-                <input
-                    type="text"
-                    name="date"
-                    id="date"
-                    value={date}
-                    onChange={this.handleChange} />
                 <button type="submit">
-                    Submit
+                    Add
                 </button>
             </form>
         );
