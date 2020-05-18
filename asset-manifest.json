@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/personal-todo/static/css/main.513d72d5.chunk.css",
+    "main.js": "/personal-todo/static/js/main.ee39ba8f.chunk.js",
+    "main.js.map": "/personal-todo/static/js/main.ee39ba8f.chunk.js.map",
+    "runtime-main.js": "/personal-todo/static/js/runtime-main.8c7145d5.js",
+    "runtime-main.js.map": "/personal-todo/static/js/runtime-main.8c7145d5.js.map",
+    "static/js/2.8e4bc234.chunk.js": "/personal-todo/static/js/2.8e4bc234.chunk.js",
+    "static/js/2.8e4bc234.chunk.js.map": "/personal-todo/static/js/2.8e4bc234.chunk.js.map",
+    "index.html": "/personal-todo/index.html",
+    "precache-manifest.f022bcc10bbb8d1e09c91e0f3507922c.js": "/personal-todo/precache-manifest.f022bcc10bbb8d1e09c91e0f3507922c.js",
+    "service-worker.js": "/personal-todo/service-worker.js",
+    "static/css/main.513d72d5.chunk.css.map": "/personal-todo/static/css/main.513d72d5.chunk.css.map",
+    "static/js/2.8e4bc234.chunk.js.LICENSE.txt": "/personal-todo/static/js/2.8e4bc234.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8c7145d5.js",
+    "static/js/2.8e4bc234.chunk.js",
+    "static/css/main.513d72d5.chunk.css",
+    "static/js/main.ee39ba8f.chunk.js"
+  ]
+}
