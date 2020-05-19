@@ -9,6 +9,24 @@ class App extends Component {
         characters: []
     };
 
+    componentWillMount (){
+        let data =[] ;
+
+        if (localStorage.getItem('items')) {
+            data = JSON.parse(localStorage.getItem('items'))
+            data = data.characters
+          } else {
+            data = []
+          }
+          console.log(data);
+        for ( let i =0; i<data.length; i++){
+            this.setState(state => ({
+                characters: [...state.characters, data[i]]
+              }))
+        }
+        console.log(this.state);
+    }
+
     removeCharacter = index => {
         const { characters } = this.state;
 
@@ -17,10 +35,16 @@ class App extends Component {
                 return i !== index;
             })
         });
+        this.updateStorage();
     }
 
     handleSubmit = character => {
+        console.log(this.state, character);
+
         this.setState({characters: [...this.state.characters, character]});
+
+        this.updateStorage();
+
     }
 
     handleCheck = (index) => {
@@ -34,12 +58,15 @@ class App extends Component {
                 return character;
             })
         });
+        this.updateStorage();
+    }
 
+    updateStorage(){
+        localStorage.setItem('items', JSON.stringify(this.state));
     }
 
     render() {
         const { characters } = this.state;
-
         return (
             <div className="container">
                 <h1>Todo-App</h1>
