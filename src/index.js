@@ -24,7 +24,6 @@ class App extends Component {
                 characters: [...state.characters, data[i]]
               }))
         }
-        console.log(this.state);
     }
 
     removeCharacter = index => {
@@ -33,17 +32,13 @@ class App extends Component {
         this.setState({
             characters: characters.filter((character, i) => {
                 return i !== index;
-            })
-        });
-        this.updateStorage();
+            })}, () => this.updateStorage() );
     }
 
     handleSubmit = character => {
         console.log(this.state, character);
 
-        this.setState({characters: [...this.state.characters, character]});
-
-        this.updateStorage();
+        this.setState({characters: [...this.state.characters, character]}, () => this.updateStorage() );
 
     }
 
@@ -57,11 +52,11 @@ class App extends Component {
 
                 return character;
             })
-        });
-        this.updateStorage();
+        }, () => this.updateStorage() );
+
     }
 
-    updateStorage(){
+    updateStorage = () => {
         localStorage.setItem('items', JSON.stringify(this.state));
     }
 
